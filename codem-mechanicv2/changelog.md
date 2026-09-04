@@ -5,6 +5,8 @@
 - One canonical plate key across caches and database
 - Padded plate rows from older versions migrated on start
 - Tuning build persists on rows with old padded plates
+- Version checker reports new releases on server start
+- Console command codem-mechanicv2:version re-checks manually
 - Requires the updated codem-lib - update it first
 
 ### Changed files
@@ -20,5 +22,7 @@ server/sv_policenitro.lua: uses the shared plate helpers
 client/cl_tuner.lua: preview plate restore fix
 client/cl_detailing.lua: uses the shared plate helpers
 client/cl_tickets.lua: uses the shared plate helpers
+server/versionchecker.lua: new, update notice and changelog
+fxmanifest.lua: loads versionchecker.lua
 codem-lib qbcore/client.lua: GetPlate trims both ends
 codem-lib esx/client.lua: GetPlate trims both ends
