@@ -10,17 +10,15 @@
 ### Changed files
 
 shared/utils.lua: added NormalizePlate and PlateKey
-server/sv_vehdata.lua: SaveVehiclePropsRow, plate transfer fix, row migration
-server/sv_tuner.lua: extras cache and vehdata keyed by the canonical plate
-server/sv_inspect.lua: condition cache chokepoint, saveCondition, RPC entries
-server/sv_tickets.lua: order plate normalised, props written via shared helper
+server/sv_vehdata.lua: props writer, transfer fix, migration
+server/sv_tuner.lua: extras cache keyed by canonical plate
+server/sv_inspect.lua: condition cache, saveCondition, RPCs
+server/sv_tickets.lua: order plate and props via helpers
 server/sv_detailing.lua: uses the shared plate helpers
 server/sv_neon.lua: uses the shared plate helpers
 server/sv_policenitro.lua: uses the shared plate helpers
 client/cl_tuner.lua: preview plate restore fix
-client/cl_detailing.lua: uses the shared pla
+client/cl_detailing.lua: uses the shared plate helpers
 client/cl_tickets.lua: uses the shared plate helpers
-
-codem-lib
-modules/framework/qbcore/client.lua: GetPlate trims both ends
-modules/framework/esx/client.lua: GetPlate trims both ends
+codem-lib qbcore/client.lua: GetPlate trims both ends
+codem-lib esx/client.lua: GetPlate trims both ends
