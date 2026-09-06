@@ -1,4 +1,4 @@
-## 1.2 - 2026-09-04
+## 1.1 - 2026-09-04
 
 - Plate transfer now moves tuning data to the new plate
 - Preview no longer changes the vehicle's plate
@@ -24,7 +24,7 @@ client/cl_tickets.lua: uses the shared plate helpers
 server/versionchecker.lua: new, update notice and changelog
 fxmanifest.lua: loads versionchecker.lua, version 1.2
 
-## 1.2.1 - 2026-09-07
+## 1.2 - 2026-09-07
 
 - Muted backfire, anti-lag, two-step stay muted after respawn
 - Mute is stored on the tuning record via popbang:persist RPC
