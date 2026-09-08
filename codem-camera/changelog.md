@@ -1,3 +1,18 @@
+## 1.2 - 2026-09-08
+
+- Fixed Fivemanage uploads failing silently, so no photo was ever saved when Fivemanage was the selected provider
+- Fivemanage now uploads through the server instead of the NUI, so the API key never reaches the game client
+- Fivemanage endpoints moved to the current v3 API
+- Framing a photo now re-uploads correctly on Fivemanage instead of losing the framed image
+- The provider name in UploadConfig.lua is no longer case sensitive
+
+### Changed files
+
+config/UploadConfig.lua: provider value lowercased, Fivemanage v3 endpoints
+server/upload.lua: Upload.Fivemanage added, provider name normalised
+server/main.lua: serverUpload handles the fivemanage provider
+client/main.lua: fivemanage routed through the server
+
 ## 1.1 - 2026-09-05
 
 - Fixed a script error firing every few seconds that also stopped players who walked up later from seeing a photo in someone's hand or an open album
