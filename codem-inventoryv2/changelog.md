@@ -54,3 +54,36 @@ locales/en.json: pouch, set swap, blueprint keys
 locales/tr.json: pouch, set swap, blueprint keys
 docs/: crafting blueprints, server exports
 build/: rebuilt
+
+## 2.42.8 - 2026-09-28
+
+- Fixed: characters undressed on join, clothes in wrong slots
+- Wear box move reads the data and runs on every join
+- Pocketed garment matching the ped goes back to its box
+- Fixed: costume scripts (wingsuit, scuba) became clothing items
+- Skin is saved from the wear boxes, not read off the ped
+- Fixed: blacklisted codem-clothing pieces became items
+- Fixed: carried props multiplied or stayed in the hands
+- Carried prop is drawn locally for every player
+- Fixed: armour reset on a slow join
+- Fixed: auto reload left the clip empty
+- Shop amount limit raised from 99 to 999
+- Fixed: pockets missing with Config.clothing = false
+- New invtest wear tests for the wear box move
+- Requires updated codem-lib and codem-clothing
+
+### Changed files
+
+clothingitems/server/legacy.lua: data driven wear box move
+clothingitems/server/main.lua: pockets, blacklist, armour
+clothingitems/client/main.lua: skin from boxes, armour guard
+client/carrying.lua: state bag + local prop
+client/weapons.lua: clip check and fallback on reload
+server/tests.lua: wear group tests
+web/src/components/Pouches.tsx: new, pocket row
+web/src/components/Inventory.tsx: pockets without character
+web/src/components/Cart.tsx: BUY_MAX 999
+build: rebuilt
+codem-lib wardrobe/client.lua: save from boxes, blacklist
+codem-clothing client/compat.lua: save given slots
+codem-clothing client/creator.lua: isClothingBlocked export
