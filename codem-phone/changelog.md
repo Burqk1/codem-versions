@@ -36,3 +36,42 @@ web/src/apps/hive/hive.css: side panel, card, roles, switches
 web/src/apps/valet/vlx.css: grid minmax, two-line model name
 locales/\*.json: hive roles, channels, members, profile
 html/: rebuilt
+
+## 3.08 - 2026-09-28
+
+- Bank: transfers to online players no longer vanish
+- Bank: failed credit refunds the sender
+- MBox: partial pickup, the rest stays in the locker
+- Services: calls-off switch is saved and survives relog
+- Services: duty and calls switches show the real state
+- Twix/Instashot: profiles with empty badge open again
+- Photos: gallery no longer empty right after joining
+- Server waits for phone load before answering app RPCs
+- Messages: no notifications to phones in airplane mode
+- Messages: sending is refused while in airplane mode
+- Valet: codem-garagesv2 support through its exports
+- Valet: garage script is re-detected when it starts late
+- Valet: state column wins over stale stored column
+- Valet: new Impounded status, chip, filter and action line
+- Valet: console command valetdiag <serverId>
+
+### Changed files
+
+server/defaults/bank.lua: identifier lookup, refunds
+modules/framework/qb/server.lua: offline credit result
+modules/framework/esx/server.lua: offline credit result
+server/mbox.lua: partial pickup
+server/defaults/services.lua: saved calls switch, load
+web/src/state/services.ts: reads duty and calls state
+server/socials/twix.lua: badge and username guards
+server/socials/instashot.lua: badge guard
+server/main.lua: PhoneSyncInFlight flag
+server/utils/utility.lua: CheckPlayerData waits for sync
+server/defaults/message.lua: airplane checks
+modules/garage/server.lua: garagesv2 branch, detection
+modules/garage/client.lua: CollectVehicle handover
+server/valet.lua: SpawnVehicleAt, reasons, valetdiag
+client/valet.lua: Impounded status
+config/Config.lua: GarageScript comment
+locales/\*.json: mboxPickupPartial, valet impounded keys
+html/: rebuilt
