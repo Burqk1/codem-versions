@@ -23,3 +23,19 @@ client/creator.lua: gift mannequin, gift:pick, ped:turn
 locales/en.lua: pay, gift, spin keys; pay chip keys removed
 locales/tr.lua: pay, gift, spin keys; pay chip keys removed
 html/: rebuilt
+
+## 1.0.6 - 2026-09-28
+
+- New export isClothingBlocked for inventory clothing items
+- Blacklisted pieces are no longer turned into items
+- Blacklist check uses gender, identifier and ace rules
+- Fixed: inventory could save the previous outfit piece
+- savePedClothing now takes the worn pieces from inventory
+- Needs updated codem-lib, update it first
+- Old codem-lib: inventory error field IsBlocked is nil
+
+### Changed files
+
+fxmanifest.lua: version 1.0.6
+client/compat.lua: savePedClothing merges worn pieces
+client/creator.lua: Creator.IsBlocked, isClothingBlocked

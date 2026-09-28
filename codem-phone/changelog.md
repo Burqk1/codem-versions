@@ -62,7 +62,6 @@ modules/framework/qb/server.lua: offline credit result
 modules/framework/esx/server.lua: offline credit result
 server/mbox.lua: partial pickup
 server/defaults/services.lua: saved calls switch, load
-web/src/state/services.ts: reads duty and calls state
 server/socials/twix.lua: badge and username guards
 server/socials/instashot.lua: badge guard
 server/main.lua: PhoneSyncInFlight flag
