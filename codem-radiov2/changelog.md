@@ -1,0 +1,21 @@
+## 1.0.0 - 2026-09-29
+
+- First release: handheld radio on pma-voice for Qbox, QBCore and ESX through codem-lib
+- Only the server puts players on a radio channel, so joining a police channel through pma-voice events, exports or state bags is blocked
+- Unit channels by job, grade and duty, gang, identifier, ace or a custom check; players are removed when they lose access, go off duty or drop the radio
+- Player channels with an owner, ownership handover and optional password; five wrong passwords lock that channel for a minute
+- Favorites, recent channels and settings saved per character
+- Member list on screen with talking indicator, callsign, anonymous mode and streamer mode
+- Talk animations, radio prop seen by other players, radio sounds and three screen colors
+- Radio voice filter, rougher when the signal is weak
+- Range and signal bars: voices get weaker and break up with distance and cut out of range
+- Dashboard radio in configured vehicles, with its own name in the member list and its own talk key
+- Dual watch: the dashboard radio listens to a second channel next to the handheld's and talks on it with its own button
+- Radio speaker: players next to someone hear their radio, from the side it is on and muffled from a closed car; set separately for handheld and dashboard radios, with an earpiece setting to keep it private
+- Background sounds behind a transmission: siren, helicopter rotor and gunshots
+- Jammer: placeable item that cuts radios around it, started from a tablet terminal with an access code and a signal-lock minigame
+- Radio scanner item that lists active channels nearby with their signal strength and member count
+- Nine languages: English, Turkish, German, French, Spanish, Portuguese, Italian, Polish and Dutch
+- Server exports: HasAccess, GetPlayerFrequency, GetPlayersOnFrequency, SetPlayerChannel, CreateChannel, RemoveChannel, GiveAccess, RemoveAccess, UpdateChannelLabel
+- Client exports: Open, Close, IsOpen, IsConnected, GetFrequency
+- Version checker reports new releases on server start; console command codem-radiov2:version re-checks manually
