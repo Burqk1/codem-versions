@@ -1,3 +1,14 @@
+## 1.3 - 2026-09-29
+
+- Fixed ox_inventory shops refusing to sell the Polaroid Camera, Polaroid Photo, Photo Album and Photo Board - the item exports rejected the purchase instead of only handling use
+
+### Changed files
+
+server/main.lua: useCamera and usePhoto no longer block non-use events
+server/album.lua: useAlbum no longer blocks non-use events
+server/board.lua: useBoard no longer blocks non-use events
+fxmanifest.lua: version 1.3
+
 ## 1.2 - 2026-09-08
 
 - Fixed Fivemanage uploads failing silently, so no photo was ever saved when Fivemanage was the selected provider
