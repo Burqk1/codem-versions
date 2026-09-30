@@ -39,3 +39,22 @@ html/: rebuilt
 fxmanifest.lua: version 1.0.6
 client/compat.lua: savePedClothing merges worn pieces
 client/creator.lua: Creator.IsBlocked, isClothingBlocked
+
+## 1.0.7 - 2026-09-30
+
+- Outfit limit is now Config.MaxOutfits, default 50
+- Config.MaxOutfits = 0 removes the limit
+- The limit also covers adding an outfit by code
+- New event codem-clothing:client:skinLoading
+- Inventory no longer zeroes the vest while a skin loads
+- Fixed: ESX multicharacters got the shop, not the creator
+- esx_skin:openSaveableMenu opens the creator like illenium
+- onSubmit / onCancel of the caller are run
+
+### Changed files
+
+fxmanifest.lua: version 1.0.7
+client/compat.lua: openSaveableMenu opens the creator
+client/spawn.lua: skinLoading event around the skin apply
+server/outfits.lua: limit from Config.MaxOutfits
+shared/config.lua: Config.MaxOutfits = 50
