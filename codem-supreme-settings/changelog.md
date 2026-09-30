@@ -38,3 +38,24 @@ client/client.lua: legend rewrite, show all, mouse 4/5
 locales/en.json: map.showAll, keybind.mouse4/5
 locales/tr.json: map.showAll, keybind.mouse4/5
 html/: rebuilt
+
+## 1.0.8 - 2026-09-29
+
+- New exports: OpenSettings, OpenKeybinds
+- New exports: OpenMap, OpenStatistics
+- Config.DisableMenu: ESC is left alone, pages open by export
+- Config.ShowMap: removes the Map entry, shortcut and OpenMap
+- Config.RegisterCommands: turns the chat commands off
+- Fixed: hovering a blip did not select its legend row
+- Fixed: blip counter flickered (13/14/13) while cycling
+- See docs/menu-api.md for the export reference
+
+### Changed files
+
+client/client.lua: exports, config switches, map focus, step
+config.lua: DisableMenu, ShowMap, RegisterCommands
+docs/menu-api.md: direct pages, menu-less setup
+web/src/App.tsx: direct page open and close
+web/src/components/useSettings.ts: start on Key Bindings
+web/src/components/QuickMenu.tsx: Map entry follows ShowMap
+html/: rebuilt
