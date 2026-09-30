@@ -1,3 +1,22 @@
+## 1.4 - 2026-09-30
+
+- Drop-in compatibility with qb-weathersync, qbx_weathersync, Renewed-Weathersync and cd_easytime
+- Scripts that depend on them (housing, apartments, heists, admin menus) work without edits
+- Remove the old weather resource; its name is still provided for dependencies
+- Blackout support: setBlackout(true) / getBlackout() exports
+- New config: Config.Compat (per-bridge on/off) and Config.BlackoutVehicles
+
+### Changed files
+
+server/compat.lua (new)
+client/compat.lua (new)
+server/main.lua: blackout + internal API for the bridge
+client/main.lua: interior sync pause + blackout
+config/Config.lua: Config.Compat, Config.BlackoutVehicles
+locale/en.lua, locale/tr.lua: compat + blackout texts
+server/logs.lua: blackout log entries
+fxmanifest.lua: version 1.4, compat files + provides
+
 ## 1.3 - 2026-09-19
 
 - Fixed Dynamic Weather turning itself off right after enabling
