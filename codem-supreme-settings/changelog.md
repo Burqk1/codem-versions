@@ -59,3 +59,16 @@ web/src/App.tsx: direct page open and close
 web/src/components/useSettings.ts: start on Key Bindings
 web/src/components/QuickMenu.tsx: Map entry follows ShowMap
 html/: rebuilt
+
+## 1.0.9 - 2026-09-30
+
+- New export IsOpen and events :opened / :closed
+- Settings error now says what blocked the pause menu
+- Fixed: screen stayed blurred after a quick double ESC
+- Fixed: GTA pause menu showing over ours (noclip scripts)
+- Docs: servers that block the pause menu
+
+### Changed files
+
+client/client.lua: IsOpen, events, blur close, pause guard
+docs/menu-api.md: blocked pause menu section

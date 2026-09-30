@@ -87,3 +87,19 @@ build: rebuilt
 codem-lib wardrobe/client.lua: save from boxes, blacklist
 codem-clothing client/compat.lua: save given slots
 codem-clothing client/creator.lua: isClothingBlocked export
+
+## 2.45.9 - 2026-09-30
+
+- Fixed: ESX name = count inventories broke the player load
+- ESX items go to free slots, unknown ones listed in console
+- Fixed: swap put any item into a clothes bag or wardrobe
+- Fixed: taser with no ammo item said out of ammo, never fired
+- Taser without an ammo item fires freely, still wears down
+
+### Changed files
+
+server/inventory.lua: reads the ESX name = count layout
+server/backpacks.lua: skips entries that are not items
+server/actions.lua: swapped item checked against the bag
+clothingitems/server/main.lua: wardrobe swap checks both
+client/weapons.lua: taser without a registered ammo item
