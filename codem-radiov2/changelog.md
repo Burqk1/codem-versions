@@ -1,4 +1,4 @@
-## 1.0.1 - 2026-10-03
+## 1.0.5 - 2026-10-03
 
 - Fixed: a phone call partner heard you through the radio filter when you pressed the radio key; calls now always sound like a call
 - Fixed: muting someone on the radio muted them in the whole game; it now only mutes their radio
@@ -11,7 +11,7 @@
 
 ### Changed files
 
-fxmanifest.lua: version 1.0.1, shared/utils.lua added
+fxmanifest.lua: version 1.0.5, shared/utils.lua added
 config.lua: Anonymous replaces AllowAnonymous, static and clicks settings
 shared/utils.lua: new, inventory events list
 shared/tuning.lua: ItemCheckInterval removed
