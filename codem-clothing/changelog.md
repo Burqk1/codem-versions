@@ -50,6 +50,8 @@ client/creator.lua: Creator.IsBlocked, isClothingBlocked
 - Fixed: ESX multicharacters got the shop, not the creator
 - esx_skin:openSaveableMenu opens the creator like illenium
 - onSubmit / onCancel of the caller are run
+- Fixed: panel layout ignored the shop's Only these stock
+- Steppers and grid now skip pieces the shop does not sell
 
 ### Changed files
 
@@ -58,3 +60,4 @@ client/compat.lua: openSaveableMenu opens the creator
 client/spawn.lua: skinLoading event around the skin apply
 server/outfits.lua: limit from Config.MaxOutfits
 shared/config.lua: Config.MaxOutfits = 50
+html/: rebuilt, panel steppers follow the shop stock
