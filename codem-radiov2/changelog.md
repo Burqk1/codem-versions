@@ -1,3 +1,28 @@
+## 1.0.1 - 2026-10-03
+
+- Fixed: a phone call partner heard you through the radio filter when you pressed the radio key; calls now always sound like a call
+- Fixed: muting someone on the radio muted them in the whole game; it now only mutes their radio
+- Fixed: codem-inventoryv2 players stayed on the channel after dropping the radio
+- Fixed: the radio item check scanned every player at once and caused a server spike; losing the radio is now caught from inventory events, list in shared/utils.lua
+- Fixed: downed players could not talk but a radio click still went out
+- Fixed: radio static still played in debug playback with static turned off
+- Settings: radio static and click sounds can be turned off per player; /micclick toggles the same setting
+- Hide me in lists moved from the settings to Config.Anonymous
+
+### Changed files
+
+fxmanifest.lua: version 1.0.1, shared/utils.lua added
+config.lua: Anonymous replaces AllowAnonymous, static and clicks settings
+shared/utils.lua: new, inventory events list
+shared/tuning.lua: ItemCheckInterval removed
+client/main.lua: inventory events, death check, /micclick uses the setting
+client/signal.lua: radio-only mute, call partners skipped
+client/fx.lua: call partners keep the call voice
+server/main.lua: item poll removed
+server/storage.lua: static and clicks settings, anonymous from config
+locales/*.json: static and click keys, anonymous removed
+html/: rebuilt
+
 ## 1.0.0 - 2026-09-29
 
 - First release: handheld radio on pma-voice for Qbox, QBCore and ESX through codem-lib
