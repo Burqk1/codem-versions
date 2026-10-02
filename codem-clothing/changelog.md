@@ -61,3 +61,28 @@ client/spawn.lua: skinLoading event around the skin apply
 server/outfits.lua: limit from Config.MaxOutfits
 shared/config.lua: Config.MaxOutfits = 50
 html/: rebuilt, panel steppers follow the shop stock
+
+## 1.0.8 - 2026-10-03
+
+- Shop stock can be set per texture, not only per piece
+- Products picker: palette badge opens a piece's textures
+- Unstocked textures never show; server checks on purchase
+- Old stock lists keep working, no migration
+- Hovering a card in Products shows a big preview
+- Piece grid: arrow keys move, camera turns with Q / E
+- New client/hooks.lua: canOpen, menuOpened, menuClosed
+- Events codem-clothing:client:menuOpened / menuClosed
+- Fixed: panel layout ignored the shop's Only these stock
+- Fixed: hat, glasses, watch, bracelet off the slot row
+
+### Changed files
+
+fxmanifest.lua: version 1.0.8, client/hooks.lua
+client/hooks.lua: new, menu hooks
+client/creator.lua: menu hooks and events, texture data
+client/admin.lua: catalog sends textures per piece
+server/admin.lua: stock keys per texture, limit 20000
+server/shops.lua: purchase checks the texture stock
+locales/en.lua: texture picker keys, rotate hint
+locales/tr.lua: texture picker keys, rotate hint
+html/: rebuilt
