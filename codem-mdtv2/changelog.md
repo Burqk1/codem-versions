@@ -1,3 +1,22 @@
+## 2.0.1 - 2026-10-03
+
+- Unit status wheel on F6 (PoliceConfig.UnitRadial)
+- Statuses: Available, Operation, On a Call, Training
+- Assign dialog: x next to On call removes the officer
+- New export GetCallSign: unit name or badge number
+- Dispatch Calls filters: All and My Calls
+- Case template previews stay inside their row
+
+### Changed files
+
+fxmanifest.lua: version 2.0.1, UnitRadial.lua
+client/Police/UnitRadial.lua: new, status wheel
+server/Police/Units.lua: statuses, GetCallSign
+config/Police/Config.lua: PoliceConfig.UnitRadial
+locales/en.json: statuses, remove from call
+locales/tr.json: statuses, remove from call
+ui/dist: rebuilt
+
 ## 2.0 - 2026-10-03
 
 - New React tablet UI, every page reads live server data
