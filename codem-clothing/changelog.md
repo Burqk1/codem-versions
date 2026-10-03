@@ -86,3 +86,21 @@ server/shops.lua: purchase checks the texture stock
 locales/en.lua: texture picker keys, rotate hint
 locales/tr.lua: texture picker keys, rotate hint
 html/: rebuilt
+
+## 1.0.9 - 2026-10-03
+
+- Shop editor: the shop point can follow the ped
+- Moving the ped moves the blip and target with it
+- Switch under the ped spot in the Map & Ped tab
+- Shops with their own ped spot start with it off
+- Fixed: studio Both restarted the 2nd gender from piece 0
+- Studio progress bar now matches the real frame count
+
+### Changed files
+
+fxmanifest.lua: version 1.0.9
+server/admin.lua: shop ped linked saved
+client/studio.lua: start point kept for the second gender
+locales/en.lua: ped link switch keys
+locales/tr.lua: ped link switch keys
+html/: rebuilt
