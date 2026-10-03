@@ -1,3 +1,73 @@
+## 2.46.0 - 2026-10-03
+
+- Console lists item definition problems on start
+- Same item written twice in one data file, with lines
+- Same name in items, Weapons, Ammo, Tints or Components
+- Names that differ only in letter case
+- qb-core shared items with another label, weight, unique
+- Fixed: items with their own use ran the usable callback
+- One item was used up twice; with one, the script failed
+- consume = 0 no longer needed on every item
+- Docs updated, new Pockets page
+
+### Changed files
+
+fxmanifest.lua: version 2.46.0
+server/items.lua: item definition check
+server/actions.lua: usable callback only when consume = 0
+locales/en.json: dup_* console lines
+locales/tr.json: dup_* console lines
+docs/: updated, items/pouches.md added
+
+## 2.45.9 - 2026-09-30
+
+- Fixed: ESX name = count inventories broke the player load
+- ESX items go to free slots, unknown ones listed in console
+- Fixed: swap put any item into a clothes bag or wardrobe
+- Fixed: taser with no ammo item said out of ammo, never fired
+- Taser without an ammo item fires freely, still wears down
+
+### Changed files
+
+server/inventory.lua: reads the ESX name = count layout
+server/backpacks.lua: skips entries that are not items
+server/actions.lua: swapped item checked against the bag
+clothingitems/server/main.lua: wardrobe swap checks both
+client/weapons.lua: taser without a registered ammo item
+
+## 2.45.8 - 2026-09-28
+
+- Fixed: characters undressed on join, clothes in wrong slots
+- Wear box move reads the data and runs on every join
+- Pocketed garment matching the ped goes back to its box
+- Fixed: costume scripts (wingsuit, scuba) became clothing items
+- Skin is saved from the wear boxes, not read off the ped
+- Fixed: blacklisted codem-clothing pieces became items
+- Fixed: carried props multiplied or stayed in the hands
+- Carried prop is drawn locally for every player
+- Fixed: armour reset on a slow join
+- Fixed: auto reload left the clip empty
+- Shop amount limit raised from 99 to 999
+- Fixed: pockets missing with Config.clothing = false
+- New invtest wear tests for the wear box move
+- Requires updated codem-lib and codem-clothing
+
+### Changed files
+
+clothingitems/server/legacy.lua: data driven wear box move
+clothingitems/server/main.lua: pockets, blacklist, armour
+clothingitems/client/main.lua: skin from boxes, armour guard
+client/carrying.lua: state bag + local prop
+client/weapons.lua: clip check and fallback on reload
+server/tests.lua: wear group tests
+web/src/components/Pouches.tsx: new, pocket row
+web/src/components/Inventory.tsx: pockets without character
+web/src/components/Cart.tsx: BUY_MAX 999
+build: rebuilt
+codem-lib wardrobe/client.lua: save from boxes, blacklist
+codem-clothing client/compat.lua: save given slots
+codem-clothing client/creator.lua: isClothingBlocked export
+
 ## 2.45.5 - 2026-09-25
 
 - Pockets for phone, wallet, cash and radio (Config.pouches)
@@ -54,73 +124,3 @@ locales/en.json: pouch, set swap, blueprint keys
 locales/tr.json: pouch, set swap, blueprint keys
 docs/: crafting blueprints, server exports
 build/: rebuilt
-
-## 2.42.8 - 2026-09-28
-
-- Fixed: characters undressed on join, clothes in wrong slots
-- Wear box move reads the data and runs on every join
-- Pocketed garment matching the ped goes back to its box
-- Fixed: costume scripts (wingsuit, scuba) became clothing items
-- Skin is saved from the wear boxes, not read off the ped
-- Fixed: blacklisted codem-clothing pieces became items
-- Fixed: carried props multiplied or stayed in the hands
-- Carried prop is drawn locally for every player
-- Fixed: armour reset on a slow join
-- Fixed: auto reload left the clip empty
-- Shop amount limit raised from 99 to 999
-- Fixed: pockets missing with Config.clothing = false
-- New invtest wear tests for the wear box move
-- Requires updated codem-lib and codem-clothing
-
-### Changed files
-
-clothingitems/server/legacy.lua: data driven wear box move
-clothingitems/server/main.lua: pockets, blacklist, armour
-clothingitems/client/main.lua: skin from boxes, armour guard
-client/carrying.lua: state bag + local prop
-client/weapons.lua: clip check and fallback on reload
-server/tests.lua: wear group tests
-web/src/components/Pouches.tsx: new, pocket row
-web/src/components/Inventory.tsx: pockets without character
-web/src/components/Cart.tsx: BUY_MAX 999
-build: rebuilt
-codem-lib wardrobe/client.lua: save from boxes, blacklist
-codem-clothing client/compat.lua: save given slots
-codem-clothing client/creator.lua: isClothingBlocked export
-
-## 2.45.9 - 2026-09-30
-
-- Fixed: ESX name = count inventories broke the player load
-- ESX items go to free slots, unknown ones listed in console
-- Fixed: swap put any item into a clothes bag or wardrobe
-- Fixed: taser with no ammo item said out of ammo, never fired
-- Taser without an ammo item fires freely, still wears down
-
-### Changed files
-
-server/inventory.lua: reads the ESX name = count layout
-server/backpacks.lua: skips entries that are not items
-server/actions.lua: swapped item checked against the bag
-clothingitems/server/main.lua: wardrobe swap checks both
-client/weapons.lua: taser without a registered ammo item
-
-## 2.46.0 - 2026-10-03
-
-- Console lists item definition problems on start
-- Same item written twice in one data file, with lines
-- Same name in items, Weapons, Ammo, Tints or Components
-- Names that differ only in letter case
-- qb-core shared items with another label, weight, unique
-- Fixed: items with their own use ran the usable callback
-- One item was used up twice; with one, the script failed
-- consume = 0 no longer needed on every item
-- Docs updated, new Pockets page
-
-### Changed files
-
-fxmanifest.lua: version 2.46.0
-server/items.lua: item definition check
-server/actions.lua: usable callback only when consume = 0
-locales/en.json: dup_* console lines
-locales/tr.json: dup_* console lines
-docs/: updated, items/pouches.md added

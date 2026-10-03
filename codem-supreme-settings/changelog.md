@@ -1,21 +1,35 @@
-## 1.0.6 - 2026-09-25
+## 1.0.9 - 2026-09-30
 
-- Key Bindings: GTA controls are editable, click a key and press
-- In-use key: the game's assign question shows, Enter yes, Esc no
-- Restore All Defaults is an action now: click, confirm, reload
-- Leave question explains: No, bind the required action, leave
-- Fixed: map key opened and closed the map in one press
-- Fixed: "Preparing the map" pass on every map open
-- Fixed: dark blurred box under the toast after a blip click
-- Fixed: game bindings took 10-60 s to apply after leaving
-- Fixed: the click that started listening was taken as Mouse 1
-- Fixed: conflict question could not be answered from the menu
+- New export IsOpen and events :opened / :closed
+- Settings error now says what blocked the pause menu
+- Fixed: screen stayed blurred after a quick double ESC
+- Fixed: GTA pause menu showing over ours (noclip scripts)
+- Docs: servers that block the pause menu
 
 ### Changed files
 
-client/client.lua: gtaBind, leaveKeymap, restore, map key
-locales/en.json: keymap hint keys; map.preparing removed
-locales/tr.json: keymap hint keys; map.preparing removed
+client/client.lua: IsOpen, events, blur close, pause guard
+docs/menu-api.md: blocked pause menu section
+
+## 1.0.8 - 2026-09-29
+
+- New exports: OpenSettings, OpenKeybinds
+- New exports: OpenMap, OpenStatistics
+- Config.DisableMenu: ESC is left alone, pages open by export
+- Config.ShowMap: removes the Map entry, shortcut and OpenMap
+- Config.RegisterCommands: turns the chat commands off
+- Fixed: hovering a blip did not select its legend row
+- Fixed: blip counter flickered (13/14/13) while cycling
+- See docs/menu-api.md for the export reference
+
+### Changed files
+
+client/client.lua: exports, config switches, map focus, step
+config.lua: DisableMenu, ShowMap, RegisterCommands
+docs/menu-api.md: direct pages, menu-less setup
+web/src/App.tsx: direct page open and close
+web/src/components/useSettings.ts: start on Key Bindings
+web/src/components/QuickMenu.tsx: Map entry follows ShowMap
 html/: rebuilt
 
 ## 1.0.7 - 2026-09-27
@@ -39,36 +53,22 @@ locales/en.json: map.showAll, keybind.mouse4/5
 locales/tr.json: map.showAll, keybind.mouse4/5
 html/: rebuilt
 
-## 1.0.8 - 2026-09-29
+## 1.0.6 - 2026-09-25
 
-- New exports: OpenSettings, OpenKeybinds
-- New exports: OpenMap, OpenStatistics
-- Config.DisableMenu: ESC is left alone, pages open by export
-- Config.ShowMap: removes the Map entry, shortcut and OpenMap
-- Config.RegisterCommands: turns the chat commands off
-- Fixed: hovering a blip did not select its legend row
-- Fixed: blip counter flickered (13/14/13) while cycling
-- See docs/menu-api.md for the export reference
+- Key Bindings: GTA controls are editable, click a key and press
+- In-use key: the game's assign question shows, Enter yes, Esc no
+- Restore All Defaults is an action now: click, confirm, reload
+- Leave question explains: No, bind the required action, leave
+- Fixed: map key opened and closed the map in one press
+- Fixed: "Preparing the map" pass on every map open
+- Fixed: dark blurred box under the toast after a blip click
+- Fixed: game bindings took 10-60 s to apply after leaving
+- Fixed: the click that started listening was taken as Mouse 1
+- Fixed: conflict question could not be answered from the menu
 
 ### Changed files
 
-client/client.lua: exports, config switches, map focus, step
-config.lua: DisableMenu, ShowMap, RegisterCommands
-docs/menu-api.md: direct pages, menu-less setup
-web/src/App.tsx: direct page open and close
-web/src/components/useSettings.ts: start on Key Bindings
-web/src/components/QuickMenu.tsx: Map entry follows ShowMap
+client/client.lua: gtaBind, leaveKeymap, restore, map key
+locales/en.json: keymap hint keys; map.preparing removed
+locales/tr.json: keymap hint keys; map.preparing removed
 html/: rebuilt
-
-## 1.0.9 - 2026-09-30
-
-- New export IsOpen and events :opened / :closed
-- Settings error now says what blocked the pause menu
-- Fixed: screen stayed blurred after a quick double ESC
-- Fixed: GTA pause menu showing over ours (noclip scripts)
-- Docs: servers that block the pause menu
-
-### Changed files
-
-client/client.lua: IsOpen, events, blur close, pause guard
-docs/menu-api.md: blocked pause menu section
