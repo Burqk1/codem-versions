@@ -103,3 +103,24 @@ server/backpacks.lua: skips entries that are not items
 server/actions.lua: swapped item checked against the bag
 clothingitems/server/main.lua: wardrobe swap checks both
 client/weapons.lua: taser without a registered ammo item
+
+## 2.46.0 - 2026-10-03
+
+- Console lists item definition problems on start
+- Same item written twice in one data file, with lines
+- Same name in items, Weapons, Ammo, Tints or Components
+- Names that differ only in letter case
+- qb-core shared items with another label, weight, unique
+- Fixed: items with their own use ran the usable callback
+- One item was used up twice; with one, the script failed
+- consume = 0 no longer needed on every item
+- Docs updated, new Pockets page
+
+### Changed files
+
+fxmanifest.lua: version 2.46.0
+server/items.lua: item definition check
+server/actions.lua: usable callback only when consume = 0
+locales/en.json: dup_* console lines
+locales/tr.json: dup_* console lines
+docs/: updated, items/pouches.md added
