@@ -1,3 +1,17 @@
+## 2.0.3 - 2026-10-04
+
+- Delay zones: alerts inside reach units delay seconds late
+- Officer codes and 911 messages are never delayed
+- Same alert while one is waiting is dropped as duplicate
+- SendDispatchAlert returns true when the alert was delayed
+
+### Changed files
+
+fxmanifest.lua: version 2.0.3
+server/main.lua: delay zones, waiting duplicates
+server/officercodes.lua: officer codes skip the delay
+config/Config.lua: DispatchConfig.Zones.DelayZones
+
 ## 2.0.2 - 2026-10-03
 
 - Cards show the call number (Call #1043)
