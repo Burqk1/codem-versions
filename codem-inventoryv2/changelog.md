@@ -1,3 +1,43 @@
+## 2.47.0 - 2026-10-04
+
+- ox_inventory 2.44.1 compatibility pass, exports and events
+- client.export/event run at once, useItem gives bar+consume
+- Usable callback runs when consume is not set (or 0)
+- Armed use refused except ammo, parts and allowArmed
+- Degrade-only items stay at 0%; add decay = true to delete
+- AddItem export: no weight check, returns slot table
+- Weapon registered = owner name, police POL serials
+- Keyboard returns an array like ox_lib inputDialog
+- Default radio item no longer has the mm_radio event
+- Fixed: text metadata stopped the save loop
+- Server verifies item use, double click uses one item
+- SetSlotCount, ReturnInventory, drops keep extra items
+- RegisterShop reads jobs; durability action fuel only
+- Unopened stash/trunk/glovebox ids resolve like ox
+- forceOpenInventory skips checks, returns the id
+- invBusy, invHotkeys, canUseWeapons respected
+- Cancelled progress bar no longer locks the inventory
+- Client Items()/ItemList() filled from start, ox shape
+- createItem hook after defaults, for every new item
+- RemoveItem, RegisterStash, temp stash, nearby fixed
+- currentWeapon.ammo, disarm, weaponWheel, ignoreWeapons
+- Throwables stack; fractional consume keeps the clock
+- Use button refreshes when an item script starts late
+- Join clothing sync no longer plays the dress bar
+- Console command codem-inventoryv2:item <name>
+
+### Changed files
+
+fxmanifest.lua: version 2.47.0
+client/: items, exports, inventory, weapons, state
+server/: actions, inventory, exports, items, weapons
+shared/: utils, config, commands
+clothingitems/: client/main, server/main, catalog
+data/items.lua: decay = true example, radio event
+locales/en.json: new texts
+locales/tr.json: new texts
+docs/: exports, events, hooks, items, weapons
+
 ## 2.46.0 - 2026-10-03
 
 - Console lists item definition problems on start
