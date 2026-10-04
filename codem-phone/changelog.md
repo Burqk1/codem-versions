@@ -1,3 +1,17 @@
+## 3.09 - 2026-10-04
+
+- App open/close animation works in game (Chromium 103)
+- Dialogs pop in with the same fix
+- Closing apps drop inner blur, finish on transition end
+- Home wallpaper blur drawn once, less GPU work
+- Dragging an icon to the edge turns one page per 900 ms
+- codem-payphone now ships in the same download
+
+### Changed files
+
+fxmanifest.lua: version 3.09
+html/: rebuilt
+
 ## 3.08 - 2026-09-28
 
 - Bank: transfers to online players no longer vanish
