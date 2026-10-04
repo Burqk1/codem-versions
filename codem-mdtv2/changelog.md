@@ -1,3 +1,28 @@
+## 2.0.2 - 2026-10-04
+
+- Sound plays when another officer assigns you to a call
+- Statistics: click an officer to see the calls they took
+- Assign dialog filters by unit status and This call
+- Units page: click a unit to list all members
+- Response lists load 25 rows at a time with totals
+- Your Unit card layout reworked, member list scrolls
+- Chat Members only lists officers who see the channel
+- Long tags cut with ..., +N counter always shown
+- Scrollbars hidden in shop, modals, cases and menus
+- Fixed stray dot for officers without a callsign
+- New columns call_message, call_street (auto added)
+
+### Changed files
+
+fxmanifest.lua: version 2.0.2
+server/Police/DispatchStats.lua: paging, officer calls
+server/Police/Units.lua: assign event carries assigner
+client/Police/Units.lua: assign sound, officer calls
+sql/mdt.sql: call_message, call_street
+locales/en.json: new texts
+locales/tr.json: new texts
+ui/dist: rebuilt
+
 ## 2.0.1 - 2026-10-03
 
 - Unit status wheel on F6 (PoliceConfig.UnitRadial)
