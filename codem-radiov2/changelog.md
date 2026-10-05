@@ -1,3 +1,24 @@
+## 1.0.6 - 2026-10-05
+
+- Callsign can be set per channel like nickname and colour
+- New export SetCallsign(source, text) for other scripts
+- codem-mdtv2 2.0.3 syncs the MDT unit name as callsign
+- Vehicle radio is front seats only
+- Member HUD always shows whoever is talking
+- Own voice playback also on the vehicle radio
+
+### Changed files
+
+fxmanifest.lua: version 1.0.6
+server/main.lua: SetCallsign export, rear-seat checks
+server/vehicle.lua: IsFront, front-seat tracking
+server/storage.lua: callsign per channel
+server/channels.lua: callsign per channel
+server/ambience.lua: callsign per channel
+client/main.lua: front-seat checks, resync event
+locales/*.json: toast_rear_seat
+html/: rebuilt
+
 ## 1.0.5 - 2026-10-03
 
 - Fixed: a phone call partner heard you through the radio filter when you pressed the radio key; calls now always sound like a call
