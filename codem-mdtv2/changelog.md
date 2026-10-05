@@ -1,3 +1,16 @@
+## 2.0.3 - 2026-10-05
+
+- Radio callsign follows the MDT unit name or badge number
+- Updates on unit create, join, leave, rename and restarts
+- PoliceConfig.RadioCallsign = false turns it off
+- Needs codem-radiov2 with the SetCallsign export
+
+### Changed files
+
+fxmanifest.lua: version 2.0.3
+server/Police/Units.lua: radio callsign sync
+config/Police/Config.lua: PoliceConfig.RadioCallsign
+
 ## 2.0.2 - 2026-10-04
 
 - Sound plays when another officer assigns you to a call
