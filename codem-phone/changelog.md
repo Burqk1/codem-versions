@@ -1,3 +1,25 @@
+## 3.11 - 2026-10-05
+
+- New phone system Andromeda (Android) next to iFruit OS
+- Galaxy-style body in 8 colours, One UI home and lock
+- App drawer, folders, edit mode, themed icons, gestures
+- Notification panel, heads-up cards, live status pills
+- Own Settings, Phone, Messages, Gallery, Clock, Notes
+- Own Email, Maps, Pulse, Voice Recorder, Galaxy Store
+- Config.Android: player choice or phone item decides
+- Config.Android.Items: Andromeda items and body colour
+- Calendar is a default app, removed from the store
+
+### Changed files
+
+fxmanifest.lua: version 3.11
+config/Config.lua: Config.Android, Android phone items
+client/main.lua: phone item picks the system
+server/main.lua: system setting locked by item mode
+config/DefaultPhoneData.json: Calendar default app
+config/AppStore.json: Calendar removed
+html/: rebuilt
+
 ## 3.10 - 2026-10-04
 
 - Call ending during video no longer leaves the camera on
