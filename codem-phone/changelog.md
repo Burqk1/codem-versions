@@ -1,3 +1,18 @@
+## 3.10 - 2026-10-04
+
+- Call ending during video no longer leaves the camera on
+- Video session, camera and input lock reset on every call end
+- Phone pose restored after video instead of the stuck selfie
+- Stopping video sends a single end message to the game
+- Input lock after video follows whether the phone is open
+
+### Changed files
+
+fxmanifest.lua: version 3.10
+client/defaults/call.lua: video teardown on every call end
+web/src/state/calls.ts: clearCall drops the video session
+html/: rebuilt
+
 ## 3.09 - 2026-10-04
 
 - App open/close animation works in game (Chromium 103)
