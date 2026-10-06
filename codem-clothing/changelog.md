@@ -1,3 +1,23 @@
+## 1.1.0 - 2026-10-06
+
+- Fixed: studio could not save shots on newer FXServer builds
+- codem-clothing-images 1.1.0 writes shots and catalog
+- Falls back to SaveResourceFile on older builds
+- Studio run end resets capture state, failed run = stopped
+- Studio page: no stale captured list, camera resent
+- Capture from here retakes existing shots
+- Update codem-clothing-images to 1.1.0 together
+
+### Changed files
+
+fxmanifest.lua: version 1.1.0
+server/nativefs.lua: codem-clothing-images exports first
+server/studio.lua: message names images 1.1.0
+client/studio.lua: run end resets capture state
+html/: rebuilt
+codem-clothing-images/server/fs.js: write/read exports
+codem-clothing-images/fxmanifest.lua: version 1.1.0
+
 ## 1.0.9 - 2026-10-03
 
 - Shop editor: the shop point can follow the ped
