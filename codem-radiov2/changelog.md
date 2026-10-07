@@ -1,3 +1,12 @@
+## 1.0.7 - 2026-10-07
+
+- Channels without a name no longer show "Unnamed channel"; only the frequency is shown
+
+### Changed files
+
+fxmanifest.lua: version 1.0.7
+html/: rebuilt
+
 ## 1.0.6 - 2026-10-05
 
 - Callsign can be set per channel like nickname and colour
