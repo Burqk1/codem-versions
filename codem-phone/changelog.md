@@ -1,3 +1,20 @@
+## 3.12 - 2026-10-07
+
+- New number is written into the phone item you used
+- Item images for the 8 Andromeda phones added
+- Item images split into images/ios and images/android
+- burnerchip.png and powerbank.png added
+- Item lists for ox_inventory and qb-inventory added
+
+### Changed files
+
+fxmanifest.lua: version 3.12
+client/main.lua: used phone item sent to number setup
+server/main.lua: used phone item passed on
+modules/inventory/server.lua: findEmptyPhoneItemLike
+[INSTALLATION]/images: ios/, android/, new images
+[INSTALLATION]/itemlist: ox and qb item lists
+
 ## 3.11 - 2026-10-05
 
 - New phone system Andromeda (Android) next to iFruit OS
