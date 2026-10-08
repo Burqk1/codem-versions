@@ -1,3 +1,22 @@
+## 1.0.8 - 2026-10-08
+
+- New handheld radio prop codem_radio with the radio screen
+- New setting: how many members the on-screen list shows
+- Talking members always show, even past the limit
+- Long member lists split into columns
+- DefaultChannels: police vehicles start on 1.10
+
+### Changed files
+
+fxmanifest.lua: version 1.0.8, codem_radio.ytyp
+stream/codem_radio.ydr: new radio prop
+stream/codem_radio.ytyp: new radio prop
+shared/tuning.lua: hand prop is codem_radio
+config.lua: hudLimit, DefaultChannels.police
+server/storage.lua: hudLimit setting
+locales/*.json: hud_limit, hud_limit_all
+html/: rebuilt
+
 ## 1.0.7 - 2026-10-07
 
 - Channels without a name no longer show "Unnamed channel"; only the frequency is shown
