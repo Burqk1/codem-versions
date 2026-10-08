@@ -4,6 +4,7 @@
 - New setting: how many members the on-screen list shows
 - Talking members always show, even past the limit
 - Long member lists split into columns
+- Member list header shows no "Unnamed" for unnamed channels
 - DefaultChannels: police vehicles start on 1.10
 
 ### Changed files
