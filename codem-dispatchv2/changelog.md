@@ -1,3 +1,15 @@
+## 2.0.4 - 2026-10-09
+
+- Units on a call can carry a short note and up to 6 tags
+- Note and tags show next to the unit in the call details
+- New server export SetUnitNote (used by codem-mdtv2)
+
+### Changed files
+
+fxmanifest.lua: version 2.0.4
+server/main.lua: SetUnitNote export
+dist/: rebuilt, unit note and tags
+
 ## 2.0.3 - 2026-10-04
 
 - Delay zones: alerts inside reach units delay seconds late
