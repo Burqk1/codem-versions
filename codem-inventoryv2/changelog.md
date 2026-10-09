@@ -1,3 +1,33 @@
+## 2.47.1 - 2026-10-09
+
+- Fixed: emoji in item data made saves fail, items lost
+- utf8 inventory columns converted to utf8mb4 at start
+- A refused row no longer stops the other saves
+- Error when a second qb-inventory resource is running
+- Vest armour no longer reset by other scripts
+- Hooks via codem-lib belong to the real script
+- Hooks of restarted scripts are dropped, not errored
+- Ammo defined in data/items.lua loads the weapon
+- Weapons with undefined ammo are listed at start
+- Square style: amount badge corners square
+- android_phone item added
+- Fishing simulator item images added
+
+### Changed files
+
+fxmanifest.lua: version 2.47.1
+server/db.lua: utf8mb4 columns, row save fallback
+server/qbcompat.lua: second qb-inventory warning
+server/exports.lua: registerHookFrom, removeHooksFrom
+server/hooks.lua: hook owner, dead hooks dropped
+server/items.lua: ammo from data/items.lua
+clothingitems/client/main.lua: vest armour tracking
+data/items.lua: android_phone
+locales/en.json: dup_ammo
+locales/tr.json: dup_ammo
+build/: rebuilt
+codem-inventory-images/images: fishing item images
+
 ## 2.47.0 - 2026-10-04
 
 - ox_inventory 2.44.1 compatibility pass, exports and events
