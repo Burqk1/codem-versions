@@ -1,3 +1,17 @@
+## 1.0.9 - 2026-10-09
+
+- Radio prop shows on players who were out of range
+- Radio prop shows on players holding it at resource start
+- Death check only runs while the radio is in use
+- Player data cached instead of read every 250 ms
+- Prop loop only checks players holding a radio
+
+### Changed files
+
+fxmanifest.lua: version 1.0.9
+client/main.lua: cached player data, lighter death check
+client/props.lua: props keyed by server id
+
 ## 1.0.8 - 2026-10-08
 
 - New handheld radio prop codem_radio with the radio screen
