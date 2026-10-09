@@ -1,3 +1,20 @@
+## 3.13 - 2026-10-09
+
+- Automatic cleanup of old database rows (config/Cleanup.lua)
+- Paid bills, history, logs, activity: 30 days by default
+- Player content and stats rules off by default (days = 0)
+- Unpaid bills are never deleted
+- Playlist names limited to 50 characters
+- Blank or control-character playlist names rejected
+
+### Changed files
+
+fxmanifest.lua: version 3.13, config/Cleanup.lua
+config/Cleanup.lua: new, cleanup rules
+server/cleanup.lua: new, runs the cleanup rules
+server/defaults/music.lua: playlist name check
+html: playlist name input max 50
+
 ## 3.12 - 2026-10-07
 
 - New number is written into the phone item you used
