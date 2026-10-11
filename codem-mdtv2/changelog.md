@@ -1,3 +1,22 @@
+## 2.0.4 - 2026-10-11
+
+- Roles and short notes for officers on calls and in units
+- New Internal Info page Unit Roles: department role list
+- Call roles and notes also shown in codem-dispatchv2
+- Needs codem-dispatchv2 2.0.4+ for roles on calls
+- Case and report lists sorted newest first by creation
+
+### Changed files
+
+fxmanifest.lua: version 2.0.4, UnitRoles.lua
+server/Police/UnitRoles.lua: new, unit roles
+server/Police/Units.lua: unit and call notes, roles
+client/Police/Units.lua: new NUI callbacks
+sql/mdt.sql: new table codem_mdtv2_unit_roles
+locales/en.json: new texts
+locales/tr.json: new texts
+ui/dist/: rebuilt
+
 ## 2.0.3 - 2026-10-05
 
 - Radio callsign follows the MDT unit name or badge number
