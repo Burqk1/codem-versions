@@ -1,3 +1,33 @@
+## 1.3 - 2026-10-11
+
+- French language added (locales/fr.json)
+- UI texts read from locales at runtime, no rebuild needed
+- New locale = copy en.json, translate, set Config.Locale
+- Config.CleaningKit.removeChance: chance a use removes kit
+- Fixed: chameleon paints 223-242 had no effect
+- carcols_gen9 and carmodcols_gen9 meta files added
+- Vanilla flatbed no longer replaced, tow job uses cdmflatbed
+- cdmflatbed model and vehicles.meta updated
+- Spray gun mist shows on painters who stream in later
+- Lighter nitro prop, flatbed and stance loops
+
+### Changed files
+
+fxmanifest.lua: version 1.3, gen9 meta files
+locales/fr.json: new
+shared/locale.lua: locale tables passed to the UI
+client/cl_core.lua: appReady sends the locale tables
+html/: rebuilt, locales loaded at runtime
+config/config.lua: Locale comment, removeChance
+server/sv_repair.lua: cleaning kit remove chance
+asset/meta: carcols_gen9.meta, carmodcols_gen9.meta
+client/cl_spraygun.lua: remote mist waits for the ped
+client/cl_boostprop.lua: lighter prop loop
+client/cl_flatbed.lua: lighter bed loop
+client/cl_ride.lua: stance pose every 250 ms
+codem-flatbed: cdmflatbed model, vehicles.meta
+codem-mechanicv2-props: vanilla flatbed files removed
+
 ## 1.2 - 2026-09-07
 
 - Muted backfire, anti-lag, two-step stay muted after respawn
