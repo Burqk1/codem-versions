@@ -1,3 +1,22 @@
+## 2.48.0 - 2026-10-11
+
+- New look Command: dark glass, hairline grid, italic titles
+- Command is the new default look, with square corners
+- Wear and pocket slots show real object silhouettes
+- Key hint bar in Command: ESC, ALT, SHIFT
+- Old default: style = 'glass', shape = 'rounded' in config
+- Players who saved their own look keep it
+
+### Changed files
+
+fxmanifest.lua: version 2.48.0
+build/: rebuilt, Command look and fonts
+client/inventory.lua: command accepted as a look
+shared/config.lua: default look command, square
+locales/en.json: Command look and key hint texts
+locales/tr.json: Command look and key hint texts
+README.md: icon credits
+
 ## 2.47.1 - 2026-10-09
 
 - Fixed: emoji in item data made saves fail, items lost
