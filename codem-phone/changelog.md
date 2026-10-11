@@ -1,3 +1,14 @@
+## 3.14 - 2026-10-11
+
+- Service status sent at most once per 2 seconds
+- Service status only sent when a status changed
+- Less event traffic to all players on busy servers
+
+### Changed files
+
+fxmanifest.lua: version 3.14
+server/defaults/services.lua: grouped status broadcast
+
 ## 3.13 - 2026-10-09
 
 - Automatic cleanup of old database rows (config/Cleanup.lua)
