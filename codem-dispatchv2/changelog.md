@@ -1,3 +1,15 @@
+## 2.0.5 - 2026-10-11
+
+- Alerts show their details by default (plate, vehicle, units)
+- On-screen cards and F3 list rows are open without a click
+- Clicking a list row opens call number, waypoint, respond
+- Long alert titles wrap to two lines everywhere
+
+### Changed files
+
+fxmanifest.lua: version 2.0.5
+dist/: rebuilt, alerts open by default
+
 ## 2.0.4 - 2026-10-09
 
 - Units on a call can carry a short note and up to 6 tags
