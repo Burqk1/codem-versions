@@ -1,3 +1,17 @@
+## 3.15 - 2026-10-11
+
+- Home app: qs-housing support, detected automatically
+- qs-housing houses, details, key holders and door locks
+- Give and take keys through qs-housing key events
+- Property tax works with qs-housing houses
+
+### Changed files
+
+fxmanifest.lua: version 3.15
+modules/housing/server.lua: qs-housing adapter
+modules/housing/client.lua: qs-housing key events
+config/Config.lua: Config.Home comment
+
 ## 3.14 - 2026-10-11
 
 - Service status sent at most once per 2 seconds
