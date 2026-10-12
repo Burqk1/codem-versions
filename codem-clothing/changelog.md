@@ -1,3 +1,16 @@
+## 1.1.1 - 2026-10-12
+
+- Arrow keys in the clothing panel: Left/Right change piece
+- Up/Down change the variant (texture)
+- Blacklisted and out-of-stock pieces are skipped
+- Props can step to none; search boxes are not affected
+- Only on slots shown with the stepper, not picture grids
+
+### Changed files
+
+fxmanifest.lua: version 1.1.1
+html/: rebuilt, arrow key stepping
+
 ## 1.1.0 - 2026-10-06
 
 - Fixed: studio could not save shots on newer FXServer builds
