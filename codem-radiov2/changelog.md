@@ -1,3 +1,17 @@
+## 1.1.0 - 2026-10-12
+
+- New setting: members per column in the on-screen list
+- Auto keeps the old layout by screen height
+- Server default Config.DefaultSettings.hudColumn = 0
+
+### Changed files
+
+fxmanifest.lua: version 1.1.0
+config.lua: DefaultSettings.hudColumn
+server/storage.lua: hudColumn setting
+locales/*.json: hud_column, hud_column_auto
+html/: rebuilt
+
 ## 1.0.9 - 2026-10-09
 
 - Radio prop shows on players who were out of range
