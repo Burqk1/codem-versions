@@ -1,3 +1,16 @@
+## 2.0.6 - 2026-10-12
+
+- New DispatchConfig.AlertPosition: call card Top / Right
+- Pixels at 1080p, scales with the resolution
+- Default keeps the old position (26, 26)
+
+### Changed files
+
+fxmanifest.lua: version 2.0.6
+config/Config.lua: DispatchConfig.AlertPosition
+client/nui.lua: position sent to the UI
+dist/: rebuilt
+
 ## 2.0.5 - 2026-10-11
 
 - Alerts show their details by default (plate, vehicle, units)
