@@ -1,3 +1,13 @@
+## 2.0.5 - 2026-10-12
+
+- Assign units dialog wider, filter buttons wrap to a new line
+- Open warrant deleted: page goes back to the warrant list
+
+### Changed files
+
+fxmanifest.lua: version 2.0.5
+ui/dist/: rebuilt
+
 ## 2.0.4 - 2026-10-11
 
 - Roles and short notes for officers on calls and in units
