@@ -1,3 +1,20 @@
+## 3.16 - 2026-10-14
+
+- Home app: codem-housing support, detected automatically
+- codem-housing houses, keys, door locks and property tax
+- Signal bars sent again after relog, respawn or number change
+- ESX duty toggle works without esx_service
+- ESX: "Service full" notice when every duty slot is taken
+
+### Changed files
+
+fxmanifest.lua: version 3.16
+modules/housing/server.lua: codem-housing adapter
+client/celltower.lua: signal resync on load
+modules/framework/esx/client.lua: duty toggle
+config/Config.lua: Config.Home comment
+locales/*.json: serviceFullTitle, serviceFull
+
 ## 3.15 - 2026-10-11
 
 - Home app: qs-housing support, detected automatically
