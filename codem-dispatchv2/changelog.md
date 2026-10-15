@@ -1,3 +1,18 @@
+## 2.0.7 - 2026-10-15
+
+- New alert field delay for alerts sent from other scripts
+- delay = false: call skips DelayZones, reaches units at once
+- delay = number: call waits that many seconds (0-3600)
+- Without delay the zone delay works as before
+
+### Changed files
+
+fxmanifest.lua: version 2.0.7
+client/alerts.lua: delay passed on from client alerts
+server/sanitize.lua: delay read and checked
+server/main.lua: per-alert delay before the zone delay
+gitbook/: delay documented
+
 ## 2.0.6 - 2026-10-12
 
 - New DispatchConfig.AlertPosition: call card Top / Right
