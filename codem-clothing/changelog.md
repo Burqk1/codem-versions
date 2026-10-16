@@ -1,3 +1,15 @@
+## 1.1.2 - 2026-10-16
+
+- Health after a model change keeps the same percentage
+- Fixes wrong health on servers with max health other than 200
+- Head blend debug line no longer printed to the console
+
+### Changed files
+
+fxmanifest.lua: version 1.1.2
+client/spawn.lua: health kept as a percentage on model swap
+client/creator.lua: head blend debug print removed
+
 ## 1.1.1 - 2026-10-12
 
 - Arrow keys in the clothing panel: Left/Right change piece
