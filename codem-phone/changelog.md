@@ -1,3 +1,21 @@
+## 3.17 - 2026-10-16
+
+- Payphone: config.lua no longer encrypted, editable again
+- Payphone: locales, framework modules, world_phones.json open
+- Payphone: all texts in locales/ (en, tr), Config.Locale
+- Payphone: admin commands and exports listed in config.lua
+- Payphone: Legion Square example booth commented out
+
+### Changed files
+
+fxmanifest.lua: version 3.17
+codem-payphone/fxmanifest.lua: escrow_ignore, locales
+codem-payphone/config/config.lua: Config.Locale, guide
+codem-payphone/locales/*.lua: new en, tr, loader
+codem-payphone/client/*.lua: texts from locales
+codem-payphone/server/*.lua: texts from locales
+codem-payphone/ui/dist/: rebuilt
+
 ## 3.16 - 2026-10-14
 
 - Home app: codem-housing support, detected automatically
