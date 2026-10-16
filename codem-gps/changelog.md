@@ -1,3 +1,19 @@
+## 1.0.1 - 2026-10-16
+
+- GPS device can be dragged anywhere, position reset in Settings
+- New Device size setting, 50 to 130 percent, kept per player
+- Config.CallsignMaxLength default 30 (was 10)
+- New dark green colour at the end of Config.Colors
+- Far away members no longer pile up on the minimap edge
+
+### Changed files
+
+fxmanifest.lua: version 1.0.1
+client/main.lua: device size, short range member blips
+config.lua: CallsignMaxLength 30, dark green colour
+locales/*.json: ui_size, ui_position
+html/: rebuilt
+
 ## 1.0.0 - 2026-10-05
 
 - First release: team GPS for Qbox, QBCore and ESX through codem-lib
