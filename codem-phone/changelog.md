@@ -1,3 +1,16 @@
+## 3.18 - 2026-10-16
+
+- Valet: Config.Valet.ServerSideSpawn = false works again
+- Valet: server spawn used only when the server made the car
+- Valet: driver always seated, fallback driver if seating fails
+- Valet: server spawned car keeps its own heading
+
+### Changed files
+
+fxmanifest.lua: version 3.18
+client/valet.lua: spawn mode from the server answer
+modules/garage/client.lua: valet driver seating, heading
+
 ## 3.17 - 2026-10-16
 
 - Payphone: config.lua no longer encrypted, editable again
