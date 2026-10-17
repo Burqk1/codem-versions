@@ -1,3 +1,14 @@
+## 1.0.2 - 2026-10-17
+
+- No blip flicker when members get in or out of vehicles
+- Own group and other groups listed apart in the map legend
+- Member blips shown on both the pause map and the minimap
+
+### Changed files
+
+fxmanifest.lua: version 1.0.2
+client/main.lua: blip reuse, legend category, blip display
+
 ## 1.0.1 - 2026-10-16
 
 - GPS device can be dragged anywhere, position reset in Settings
