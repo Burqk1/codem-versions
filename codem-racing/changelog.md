@@ -1,3 +1,23 @@
+## 2.0.2 - 2026-10-19
+
+- New: watch a racer's screen live from a live race
+- New store showroom view for vehicles
+- Achievement badges show name and description on hover
+- Custom vehicle classes get their own colour on race cards
+- Daily competitive races keep going past midnight
+- Config.CompetitiveRaceMinimumPlayers = 1 now honoured
+- About 200 unused old tablet images removed
+
+### Changed files
+
+fxmanifest.lua: version 2.0.2
+client/spectate.lua, server/spectate.lua: live watching
+server/lobby.lua, server/livedetails.lua: watch, players
+server/dailycompetitive.lua: daily race schedule
+config/config.lua: CompetitiveRaceStartTime comment
+locales/*.lua: watch texts, 30 languages
+ui/dist/: rebuilt
+
 ## 2.0.1 - 2026-10-19
 
 - New dispatchType codem-dispatchv2 for police race alerts
