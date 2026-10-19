@@ -1,3 +1,19 @@
+## 2.0.6 - 2026-10-19
+
+- Case and report tag counts cached, no full table scan
+- Tag cache refreshed only when tags change
+- Dispatch call log filter: All / Assigned / Self
+
+### Changed files
+
+fxmanifest.lua: version 2.0.6
+server/utils/TagCountCache.lua: new, tag count cache
+server/Police/Cases.lua: tag counts from the cache
+server/Police/Reports.lua: tag counts from the cache
+server/Police/DispatchStats.lua: call log mode filter
+locales/*.json: statistics.mode
+ui/dist/: rebuilt
+
 ## 2.0.5 - 2026-10-12
 
 - Assign units dialog wider, filter buttons wrap to a new line
