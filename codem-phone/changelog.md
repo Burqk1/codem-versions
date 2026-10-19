@@ -1,3 +1,24 @@
+## 3.19 - 2026-10-19
+
+- New Casino app: Sugarfall, Stormcrown and Jellyburst slots
+- Casino chips: deposit from bank, withdraw back to bank
+- Every spin is rolled on the server, unfinished spins resume
+- Free spins bonus buy, RTP per game in Config.Casino
+- Casino Discord log: bonus buys, deposits, withdraws, big wins
+- Maps: location sharing list cached, less database load
+
+### Changed files
+
+fxmanifest.lua: version 3.19
+client/games/casino.lua, server/games/casino.lua: new
+config/Config.lua: Config.Casino
+config/DiscordLogs.lua: casino log
+config/AppStore.json: casino app
+sql/phone.sql: casino wallets and pending spins
+server/defaults/maps.lua: location sharing cache
+locales/*.json: casino texts
+html/: rebuilt
+
 ## 3.18 - 2026-10-16
 
 - Valet: Config.Valet.ServerSideSpawn = false works again
