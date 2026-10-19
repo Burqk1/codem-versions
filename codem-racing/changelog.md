@@ -1,3 +1,19 @@
+## 2.0.1 - 2026-10-19
+
+- New dispatchType codem-dispatchv2 for police race alerts
+- Tracks page reworked, every track shows its length
+- Store: full background vehicle images no longer cut out
+- Home board titles no longer overflow their card
+- Config.DefaultLanguage back to "en"
+
+### Changed files
+
+fxmanifest.lua: version 2.0.1
+client/utility.lua: codem-dispatchv2 police alert
+config/config.lua: codem-dispatchv2, default language en
+locales/*.lua: trackLength, 30 languages
+ui/dist/: rebuilt
+
 ## 2.0 - 2026-10-19
 
 - Full rebuild: new racing tablet UI, all Lua rewritten
