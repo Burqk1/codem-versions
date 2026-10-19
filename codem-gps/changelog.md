@@ -1,3 +1,16 @@
+## 1.0.3 - 2026-10-19
+
+- Map legend no longer flickers on busy channels
+- Own job listed per member, other jobs under Other Players
+- Job change inside the same group regroups the legend
+- In a vehicle the blip points where the vehicle faces
+
+### Changed files
+
+fxmanifest.lua: version 1.0.3
+client/main.lua: legend grouping by job, vehicle heading
+server/main.lua: member job, reconnect on job change
+
 ## 1.0.2 - 2026-10-17
 
 - No blip flicker when members get in or out of vehicles
