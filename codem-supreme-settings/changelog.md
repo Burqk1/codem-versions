@@ -1,3 +1,23 @@
+## 1.1.0 - 2026-10-20
+
+- New look: Apex, server default with Config.Style
+- Players pick their own look in Panel > Menu style
+- Controller support for menu, quick menu, keybinds, map
+- Key hints show controller buttons while one is used
+- Keybinds page fully usable with the keyboard
+- Game menu sounds on move, change, select and back
+- Picking a slider or list value jumps straight to it
+- Fixed wrong settings page on fast category switching
+- Menu opens on key press instead of release
+
+### Changed files
+
+fxmanifest.lua: version 1.1.0
+client/client.lua: controller, sounds, settings fixes
+config.lua: Config.Style
+locales/en.json, locales/tr.json: menu style texts
+html/: rebuilt
+
 ## 1.0.9 - 2026-09-30
 
 - New export IsOpen and events :opened / :closed
