@@ -1,3 +1,12 @@
+## 1.1.3 - 2026-10-20
+
+- Creator model change keeps the health percentage
+
+### Changed files
+
+fxmanifest.lua: version 1.1.3
+client/creator.lua: health kept after a model swap
+
 ## 1.1.2 - 2026-10-16
 
 - Health after a model change keeps the same percentage
