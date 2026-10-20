@@ -1,3 +1,13 @@
+## 2.0.8 - 2026-10-20
+
+- Alerts hidden while the pause menu is open
+
+### Changed files
+
+fxmanifest.lua: version 2.0.8
+client/nui.lua: pause menu watch
+dist/: rebuilt
+
 ## 2.0.7 - 2026-10-15
 
 - New alert field delay for alerts sent from other scripts
