@@ -1,3 +1,30 @@
+## 2.0 - 2026-10-20
+
+- Full redesign: tablet, tuning menu, overlays, admin panel
+- Tablet: icon rail (Q/E), lift home, nearby vehicles inline
+- Orders split into To install / To invoice
+- Tuning menu: bottom dock, photo cards, Work Order column
+- Tuning keys: Q/E, A/D, arrows, Z/C, Enter, F
+- Per shop menu layout: Showcase or List (Settings)
+- Admin: search players and add them to the shop job
+- Shop logo shown on the mechanic tablet
+- Default tuning colour is now pink, saved themes kept
+- 30 languages, pick one with Config.Locale
+- English typos fixed
+- No database or config migration needed
+
+### Changed files
+
+fxmanifest.lua: version 2.0
+html/: new interface
+client/cl_tuner.lua: menu layout
+client/cl_mgmt.lua, server/sv_mgmt.lua: save layout
+client/cl_core.lua: shop logo on the tablet
+client/admin/cl_admin.lua: player search, add to job
+server/admin/sv_admin.lua: player search, add to job
+config/config.lua: language list
+locales/*.json: 28 new languages, new texts
+
 ## 1.3 - 2026-10-11
 
 - French language added (locales/fr.json)
