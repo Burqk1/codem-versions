@@ -1,3 +1,16 @@
+## 2.0.3 - 2026-10-20
+
+- Achievement badges can be moved between profile slots
+- Badges saved with a text slot number are shown again
+- Broken or doubled badge slots cleaned when a profile loads
+
+### Changed files
+
+fxmanifest.lua: version 2.0.3
+server/data/racers.lua: slot check on load
+server/profile.lua: move a badge between slots
+ui/dist/: rebuilt
+
 ## 2.0.2 - 2026-10-19
 
 - New: watch a racer's screen live from a live race
