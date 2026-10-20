@@ -1,3 +1,23 @@
+## 2.49.0 - 2026-10-20
+
+- 30 languages, pick one with Config.locale
+- Admin vehicles: open trunks and gloveboxes listed too
+- Admin vehicles: owner looked up by plate
+- Weapon check every 100 ms instead of every frame
+- Admin player and vehicle cache refreshes on time
+- Missing texts added: vehicle storage, inventory, item
+- Config.locale default is now 'en'
+- New item image: racingtablet
+
+### Changed files
+
+fxmanifest.lua: version 2.49.0
+client/weapons.lua: weapon loop
+server/admin.lua: open trunks and gloveboxes, cache
+shared/config.lua: Config.locale en
+locales/*.json: 28 new languages, new texts
+build/: rebuilt
+
 ## 2.48.0 - 2026-10-11
 
 - New look Command: dark glass, hairline grid, italic titles
