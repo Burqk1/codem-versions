@@ -1,3 +1,15 @@
+## 2.1.1 - 2026-10-22
+
+- Admin panel shop editor: Showcase / List / Classic picker
+- New Config.AdminShop.menuLayout for the admin tuning menu
+
+### Changed files
+
+fxmanifest.lua: version 2.1.1
+server/admin/sv_admin.lua: menuLayout from the shop editor
+config/config.lua: Config.AdminShop.menuLayout
+html/: rebuilt
+
 ## 2.1 - 2026-10-22
 
 - Classic menu layout: the original 1.3 tuning menu is back
