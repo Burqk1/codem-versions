@@ -1,3 +1,18 @@
+## 2.0.4 - 2026-10-22
+
+- New Config.Spectate: false turns live spectating off
+- Finished, DNF or departed racers can no longer be watched
+- Their stream stops and viewers are told it ended
+
+### Changed files
+
+fxmanifest.lua: version 2.0.4
+config/config.lua: Config.Spectate
+server/spectate.lua: refuse when off or racer out
+server/race.lua, server/lobby.lua: stop stream when out
+client/main.lua: spectate permission to the tablet
+ui/dist/: rebuilt
+
 ## 2.0.3 - 2026-10-20
 
 - Achievement badges can be moved between profile slots
