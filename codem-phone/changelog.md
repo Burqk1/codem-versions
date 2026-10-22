@@ -1,3 +1,12 @@
+## 3.20 - 2026-10-22
+
+- Jobby: job vault works with Renewed-Banking again
+
+### Changed files
+
+fxmanifest.lua: version 3.20
+modules/jobby/account.lua: Renewed-Banking export names
+
 ## 3.19 - 2026-10-19
 
 - New Casino app: Sugarfall, Stormcrown and Jellyburst slots
