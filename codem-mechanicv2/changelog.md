@@ -1,3 +1,22 @@
+## 2.1 - 2026-10-22
+
+- Classic menu layout: the original 1.3 tuning menu is back
+- Settings > Menu Layout: Showcase, List or Classic
+- Layout saved message, failed save reverts the picker
+- White boxes in the tablet and admin panel made dark
+- Long layout descriptions no longer cut off
+- cdmflatbed model and vehicles.meta updated
+- cdmflatbed no longer spawns in traffic
+
+### Changed files
+
+fxmanifest.lua: version 2.1
+client/cl_mgmt.lua, server/sv_mgmt.lua: classic layout
+client/cl_tuner.lua: classic layout sent to the menu
+locales/*.json: layoutSaved, layoutClassic
+html/: rebuilt
+codem-flatbed: yft, vehicles.meta, handling.meta
+
 ## 2.0 - 2026-10-20
 
 - Full redesign: tablet, tuning menu, overlays, admin panel
