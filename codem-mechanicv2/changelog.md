@@ -1,3 +1,17 @@
+## 2.1.2 - 2026-10-23
+
+- Fixed stance wheels flickering while driving
+- List layout: vehicle card stays visible in every step
+- Paint swatch shows its name on hover
+- Paint search above the palette, all finishes
+
+### Changed files
+
+fxmanifest.lua: version 2.1.2
+client/cl_ride.lua: stance wheels every frame when moving
+locales/*.json: menu.searchPaint
+html/: rebuilt
+
 ## 2.1.1 - 2026-10-22
 
 - Admin panel shop editor: Showcase / List / Classic picker
