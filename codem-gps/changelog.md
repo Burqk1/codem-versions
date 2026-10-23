@@ -1,3 +1,23 @@
+## 1.0.4 - 2026-10-23
+
+- Members in one vehicle show as one blip, the driver's
+- Vehicle blips show a sight cone, only on the driver
+- Siren keeps the vehicle icon and pulses the blip colour
+- Config.Blips.SirenIcon = true brings back the siren icon
+- Config.Blips.MergeVehicles turns shared vehicle blips off
+- Walk and drive while the GPS is open
+- Typing in a field keeps the keyboard in the GPS
+- Escape that closes the GPS no longer opens the pause menu
+- Config.Blips.Types: foot cone is now indicator
+
+### Changed files
+
+fxmanifest.lua: version 1.0.4
+client/main.lua: vehicle blips, sight cone, siren, input
+server/main.lua: vehicle crews, siren with vehicle kind
+config.lua: SirenIcon, MergeVehicles, blip types
+html/: web build
+
 ## 1.0.3 - 2026-10-19
 
 - Map legend no longer flickers on busy channels
