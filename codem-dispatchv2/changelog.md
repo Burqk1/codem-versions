@@ -1,3 +1,15 @@
+## 2.0.9 - 2026-10-24
+
+- Emergency.ChatMessages = false keeps messages out of chat
+- New emergency messages then only show in dispatch
+- Answers with /r still go to chat
+
+### Changed files
+
+fxmanifest.lua: version 2.0.9
+config/Config.lua: DispatchConfig.Emergency.ChatMessages
+server/emergency.lua: chat message only when enabled
+
 ## 2.0.8 - 2026-10-20
 
 - Alerts hidden while the pause menu is open
