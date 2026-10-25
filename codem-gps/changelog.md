@@ -1,3 +1,26 @@
+## 1.0.5 - 2026-10-25
+
+- Discord logs: GPS on, off and channel changes
+- Webhook is set in the new config_server.lua (server only)
+- 21 new languages, 30 in total
+- Config.Items false turns that GPS off
+- Wrong Config.Items value warns and uses the default
+- Item images in install/images
+- Sight cone no longer blinks on callsign or colour change
+
+### Changed files
+
+config_server.lua: new, Discord webhook
+server/webhook.lua: new, batched Discord logs
+server/main.lua: logs, Config.Items false
+client/main.lua: sight cone kept on restyle
+shared/utils.lua: Config.Items check
+config.lua: Items and Locale comments
+locales/*.json: 21 new languages, log texts
+install/: item images, README, items.md
+html/: web build
+fxmanifest.lua: version 1.0.5, new server files
+
 ## 1.0.4 - 2026-10-23
 
 - Members in one vehicle show as one blip, the driver's
