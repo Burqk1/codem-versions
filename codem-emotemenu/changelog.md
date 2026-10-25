@@ -1,3 +1,19 @@
+## 1.0.3 - 2026-10-25
+
+- Shift + 1-9 (or numpad) plays the emote in that quick slot
+- Works with the menu closed or open
+- Shift + number no longer switches weapons when a slot is set
+- Plain number keys no longer play slots inside the menu
+- Admin panel emote lists have a visible scrollbar
+
+### Changed files
+
+fxmanifest.lua: version 1.0.3
+client/keybinds.lua: Shift + number quick slots
+client/menu.lua: Menu.SlotEmote
+client/main.lua: uses Menu.SlotEmote
+html/: rebuilt
+
 ## 1.0.2 - 2026-10-18
 
 - Emote key binds: Shift/Alt + key per emote, saved per player
