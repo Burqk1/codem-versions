@@ -1,3 +1,20 @@
+## 1.1.1 - 2026-10-30
+
+- New config_server.lua: Discord webhook logs (server only)
+- Logs frequency join, leave and switch per player
+- Each log event can be turned off in Webhook.Events
+- Fix: per-channel callsign is now saved
+
+### Changed files
+
+fxmanifest.lua: version 1.1.1, new server files
+config_server.lua: new, ServerConfig.Webhook
+server/webhook.lua: new
+server/channels.lua: join / leave / switch logs
+server/main.lua: log cleanup on drop
+server/storage.lua: per-channel callsign saved
+locales/*.json: log_* keys
+
 ## 1.1.0 - 2026-10-12
 
 - New setting: members per column in the on-screen list
