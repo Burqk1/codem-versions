@@ -1,3 +1,21 @@
+## 2.0.7 - 2026-10-31
+
+- Officers see only their own internal reports
+- internal_reports_authority still sees every report
+- Report updates go only to officers who may see them
+- Authority opens on All reports, listed before My reports
+- Fix: shop log finds the bought weapon by its serial
+- Fix: shop log item names compared without case
+
+### Changed files
+
+fxmanifest.lua: version 2.0.7
+server/Police/InternalReports.lua: per-officer visibility
+server/Police/Main.lua: visible reports on load
+server/Police/WebCredentials.lua: visible reports on load
+server/Shop/Shop.lua: purchase log by serial
+ui/dist/: rebuilt
+
 ## 2.0.6 - 2026-10-19
 
 - Case and report tag counts cached, no full table scan
