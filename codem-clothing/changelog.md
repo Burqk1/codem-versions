@@ -1,3 +1,19 @@
+## 1.1.4 - 2026-10-31
+
+- 30 languages, pick one with Config.Locale
+- Missing keys fall back to English instead of Turkish
+- Face code no longer carries tattoos or the hair style
+- Import only in new character, surgeon and admin ped menu
+- Fix: shop commission text shows 10% instead of %10
+
+### Changed files
+
+fxmanifest.lua: version 1.1.4, every locale listed
+locales/*.lua: 28 new languages, transfer text
+locales/locales.lua: English fallback
+shared/config.lua: Config.Locale language list
+html/: rebuilt
+
 ## 1.1.3 - 2026-10-20
 
 - Creator model change keeps the health percentage
