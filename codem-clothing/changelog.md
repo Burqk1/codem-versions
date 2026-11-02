@@ -1,3 +1,29 @@
+## 1.1.5 - 2026-11-02
+
+- New: shop warehouse, owners order stock for the rails
+- Config.ShopOwnership.warehouse and wholesale
+- New: outfit bag item opens your wardrobe (Config.OutfitBag)
+- Add the outfitbag item to your inventory items
+- New: custom categories page in the admin panel
+- New: private fitting room switch per shop
+- New: barber hair style stock tab
+- New: custom blip name per shop
+- New: arrows for pieces and textures in the store layout
+- Fix: skin load no longer resets health or max health
+- Fix: health regeneration no longer turned off
+
+### Changed files
+
+fxmanifest.lua: version 1.1.5, new files
+shared/config.lua: warehouse, wholesale, OutfitBag
+client/warehouse.lua, server/warehouse.lua: new
+client/outfitbag.lua, server/outfitbag.lua: new
+server/categories.lua: new
+client/admin.lua, compat.lua, creator.lua, shops.lua
+client/spawn.lua, server/admin.lua, server/shops.lua
+locales/*.lua: new keys, 30 languages
+html/: rebuilt
+
 ## 1.1.4 - 2026-10-31
 
 - 30 languages, pick one with Config.Locale
