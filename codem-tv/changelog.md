@@ -1,3 +1,20 @@
+## 1.0.2 - 2026-11-05
+
+- New: HLS (.m3u8) streams on TVs and screens, live or VOD
+- The stream host must allow CORS
+- Old config.lua: add hls = true to Config.Platforms
+- New exports: Pause(key), Resume(key), Seek(key, seconds)
+
+### Changed files
+
+fxmanifest.lua: version 1.0.2
+config/config.lua: Config.Platforms.hls
+server/exports.lua: Pause, Resume, Seek
+server/media.lua: .m3u8 links
+html/screen/screen.js: HLS playback
+html/screen/hls.min.js, hls.LICENSE: new
+locales/*.lua: platform_hls
+
 ## 1.0.1 - 2026-11-03
 
 - New: cinemas with shows, tickets, kiosks and a guard ped
