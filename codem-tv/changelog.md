@@ -1,3 +1,20 @@
+## 1.0.3 - 2026-11-06
+
+- New: Config.NowPlaying hides the card for every player
+- Fix: TV updates send only the changed part, not the full list
+- Fix: /tvadmin panel no longer scans everything per row
+- Fix: vehicle radio records no longer pile up over uptime
+- Fix: TV picture flickering on stock TV models
+- Fix: typing in the vehicle radio triggered other key binds
+
+### Changed files
+
+fxmanifest.lua: version 1.0.3
+config/config.lua: Config.NowPlaying
+server/main.lua, server/admin.lua
+client/screens.lua, client/remote.lua, client/settings.lua
+html/ui/: rebuilt
+
 ## 1.0.2 - 2026-11-05
 
 - New: HLS (.m3u8) streams on TVs and screens, live or VOD
