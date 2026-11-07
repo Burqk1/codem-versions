@@ -1,3 +1,17 @@
+## 1.0.4 - 2026-11-07
+
+- Quick slots now use Shift + Numpad 1-9 only
+- Shift + top row numbers switch weapons again
+- Quick slot bar hint shows Shift + NUM 1-9
+- Shift + top row number can no longer be saved as a bind
+
+### Changed files
+
+fxmanifest.lua: version 1.0.4
+client/keybinds.lua: numpad quick slots, no weapon key block
+server/storage.lua: rejects Shift + top row number binds
+html/: rebuilt
+
 ## 1.0.3 - 2026-10-25
 
 - Shift + 1-9 (or numpad) plays the emote in that quick slot
