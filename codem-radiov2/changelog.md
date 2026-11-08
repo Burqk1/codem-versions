@@ -1,3 +1,13 @@
+## 1.1.2 - 2026-11-08
+
+- Job and gang read only for channels with job/gang rules
+- Channel list reads job and gang once, not per channel
+
+### Changed files
+
+fxmanifest.lua: version 1.1.2
+server/access.lua: job and gang read once per check
+
 ## 1.1.1 - 2026-10-30
 
 - New config_server.lua: Discord webhook logs (server only)
