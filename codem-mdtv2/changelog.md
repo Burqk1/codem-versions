@@ -1,3 +1,22 @@
+## 2.0.9 - 2026-11-09
+
+- Box target zones for lockers, labs and shop points
+- New LockerZoneSize, LabZoneSize, InteractionZoneSize
+- Per-location size, rotation and distance overrides
+- Medical notes show editor formatting
+- Internal report and medical text cleaned before display
+- codem-mdtv2-prop back in the package
+
+### Changed files
+
+fxmanifest.lua: version 2.0.9
+client/utils/interaction.lua: box zones, size, rotation
+client/Evidence/locker.lua, client/Evidence/main.lua
+client/Shop/Main.lua: per-location overrides
+config/Evidence/Config.lua: LockerZoneSize, LabZoneSize
+config/Shop/Config.lua: InteractionZoneSize
+ui/dist: rebuilt
+
 ## 2.0.7 - 2026-10-31
 
 - Officers see only their own internal reports
