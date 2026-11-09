@@ -1,3 +1,17 @@
+## 1.0.5 - 2026-11-09
+
+- /animpos works on seats: 50 cm sideways, 30 cm height, 90 deg
+- Seat offset kept while seated, also on pose switch
+- Scenario seat poses can be moved without standing up
+- Fix: standing up during animpos closes it cleanly
+
+### Changed files
+
+fxmanifest.lua: version 1.0.5
+client/animpos.lua: seated adjust mode
+client/seats.lua: seat offset kept, used on pose switch
+client/main.lua: cancel while seated
+
 ## 1.0.4 - 2026-11-07
 
 - Quick slots now use Shift + Numpad 1-9 only
