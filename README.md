@@ -1,25 +1,25 @@
 # CodeM Versions
 
-Scriptlerin guncel surum ve changelog kayitlari. Musterilerin sunucusundaki
-`versionchecker.lua` bu repoyu okur.
+Current version and changelog records for the scripts. `versionchecker.lua` on
+customers' servers reads this repo.
 
-Bu repoda kod yoktur, sadece veri vardir. Klasor adlari, dosya adlari ve
-asagidaki format musteri sunucularindaki scriptler tarafindan okundugu icin
-bunlari degistirmek dagitilmis butun kurulumlari etkiler. `versionchecker.lua`
-bu repoda bulunmaz; okuma ve karsilastirma mantigi her scriptin kendi
-icindedir. Repo'nun varsayilan dali `main`.
+This repo contains no code, only data. Folder names, file names and the format
+below are read by scripts on customer servers, so changing them affects every
+deployed installation. `versionchecker.lua` is not in this repo; the reading
+and comparison logic lives inside each script. The repo's default branch is
+`main`.
 
-## Yapi
+## Structure
 
     <script-adi>/
       version.json    guncel surum
       changelog.md    surum notlari
 
-Klasor adi, script tarafindaki `VersionChecker.key` degeriyle birebir ayni
-olmalidir. Bir klasorun adini degistirmek, o scripti kullanan musterilerde
-surum kontrolunu bozar.
+The folder name must match the `VersionChecker.key` value on the script side
+exactly. Renaming a folder breaks the version check for customers using that
+script.
 
-## Kayitli scriptler
+## Registered scripts
 
     codem-admin                  codem-motelcreator
     codem-camera                 codem-pettycrimes
@@ -35,20 +35,21 @@ surum kontrolunu bozar.
     codem-mdtv2
     codem-mechanicv2
 
-Guncel surumler her klasorun `version.json` dosyasindadir.
+The current versions are in each folder's `version.json` file.
 
-## Yeni surum cikarirken
+## Releasing a new version
 
-1. Script'in `fxmanifest.lua` dosyasinda `version` degerini artir
-2. Buradaki `<script-adi>/version.json` icindeki `version` degerini ayni yap
-3. `<script-adi>/changelog.md` dosyasinin en ustune yeni blok ekle
+1. Bump the `version` value in the script's `fxmanifest.lua`
+2. Set the `version` value in `<script-adi>/version.json` here to the same value
+3. Add a new block at the top of `<script-adi>/changelog.md`
 
-Commit mesaji icin ornek: `codem-mdtv2 2.0.9`.
+Example commit message: `codem-mdtv2 2.0.9`.
 
-## Yeni script eklerken
+## Adding a new script
 
-Yeni bir klasor ac, icine `version.json` ve `changelog.md` koy. Script tarafinda
-`versionchecker.lua` icindeki `VersionChecker.key` degerini klasor adiyla ayni yap.
+Create a new folder and put `version.json` and `changelog.md` in it. On the
+script side, set the `VersionChecker.key` value in `versionchecker.lua` to the
+same value as the folder name.
 
 ## version.json
 
@@ -58,19 +59,19 @@ Yeni bir klasor ac, icine `version.json` ve `changelog.md` koy. Script tarafinda
         "message": ""
     }
 
-- `version`   : zorunlu, `fxmanifest.lua` ile ayni olmali
-- `critical`  : true ise konsolda "KRITIK GUNCELLEME" yazar
-- `message`   : doldurulursa changelog'un ustunde tek satir gorunur
+- `version`   : required, must match `fxmanifest.lua`
+- `critical`  : if true, prints "KRITIK GUNCELLEME" ("CRITICAL UPDATE") in the console
+- `message`   : if filled in, shown as a single line above the changelog
 
-Notlar:
+Notes:
 
-- Anahtarlarin sirasi onemli degil (gecerli JSON olmasi yeterli). Bazi
-  dosyalarda `critical` ve `message` once yaziliyor.
-- Surum formati scriptten scripte farkli: `codem-phone` iki parca
-  (`3.20`), `codem-inventoryv2` uc parca (`2.49.0`) kullaniyor. Karsilastirma
-  mantigi `versionchecker.lua` icinde oldugu icin bir scriptin mevcut
-  formatini degistirme; her zaman `fxmanifest.lua` ile ayni yaz.
-- Su an hicbir scriptte `critical: true` veya dolu bir `message` yok.
+- Key order doesn't matter (it just has to be valid JSON). In some files
+  `critical` and `message` are written first.
+- The version format differs from script to script: `codem-phone` uses two
+  parts (`3.20`), `codem-inventoryv2` uses three parts (`2.49.0`). Since the
+  comparison logic is inside `versionchecker.lua`, don't change a script's
+  existing format; always write it the same as in `fxmanifest.lua`.
+- Currently no script has `critical: true` or a non-empty `message`.
 
 ## changelog.md
 
@@ -81,15 +82,15 @@ Notlar:
     ## 1.3 - 2026-09-02
     - Overview istatistik ekrani
 
-- Baslik: `## <surum> - <tarih>` (tarih opsiyonel)
-- Maddeler: `- ` ile baslayan satirlar
-- En yeni surum en ustte
-- Musteri sadece kendi surumunden yeni olanlari gorur
+- Header: `## <surum> - <tarih>` (version - date; the date is optional)
+- Items: lines starting with `- `
+- Newest version at the top
+- Customers only see versions newer than their own
 
-### "Changed files" bolumu
+### "Changed files" section
 
-Cogu blokta maddelerden sonra, hangi dosyalarin degistigini listeleyen bir
-`### Changed files` alt basligi var:
+In most blocks, after the items, there is a `### Changed files` subheading
+that lists which files changed:
 
     ## 1.0.3 - 2026-11-06
 
@@ -100,23 +101,23 @@ Cogu blokta maddelerden sonra, hangi dosyalarin degistigini listeleyen bir
     fxmanifest.lua: version 1.0.3
     config/config.lua: Config.NowPlaying
 
-Bu bolumdeki satirlar `- ` ile baslamaz, yani yukaridaki kurala gore madde
-sayilmazlar. Satirlarin `- ` ile baslamamasina dikkat et. Bu bolumun musteri
-konsolunda nasil gorundugu `versionchecker.lua` icinde belirlenir ve buradan
-dogrulanamaz.
+The lines in this section don't start with `- `, so under the rule above they
+are not counted as items. Make sure these lines don't start with `- `. How this
+section appears in the customer's console is determined inside
+`versionchecker.lua` and can't be verified from here.
 
-## Kontrol listesi
+## Checklist
 
-Yayinlamadan once:
+Before publishing:
 
-- `version.json` icindeki `version` ile `changelog.md` icindeki en ustteki
-  `## ` basligindaki surum ayni mi
-- Ikisi de script'in `fxmanifest.lua` dosyasindaki `version` ile ayni mi
-- `version.json` gecerli JSON mi (sonda virgul yok, cift tirnak)
+- Does the `version` in `version.json` match the version in the topmost `## `
+  header in `changelog.md`?
+- Do both match the `version` in the script's `fxmanifest.lua`?
+- Is `version.json` valid JSON (no trailing comma, double quotes)?
 
-Mevcut durumda dikkat edilmesi gerekenler:
+Things to watch for in the current state:
 
-- `codem-carservice/changelog.md` icinde sadece `## 1.0.1` basligi ve tek bir
-  "Initial release" maddesi var; bu surumun gercek notlari ve tarihi bilinmiyor.
-- `codem-dynamicweather/changelog.md` icindeki `## 1.2` basliginda tarih yok.
-  Tarih opsiyonel oldugu icin bu kurala uygun.
+- `codem-carservice/changelog.md` only has a `## 1.0.1` header and a single
+  "Initial release" item; the real notes and date for this version are unknown.
+- The `## 1.2` header in `codem-dynamicweather/changelog.md` has no date.
+  Since the date is optional, this is within the rules.
