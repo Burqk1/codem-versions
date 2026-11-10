@@ -116,7 +116,7 @@ Yayinlamadan once:
 
 Mevcut durumda dikkat edilmesi gerekenler:
 
-- `codem-carservice/changelog.md` bos (sadece bir satir sonu). `version.json`
-  `1.0.1` diyor ama bu surum icin not yok.
+- `codem-carservice/changelog.md` icinde sadece `## 1.0.1` basligi ve tek bir
+  "Initial release" maddesi var; bu surumun gercek notlari ve tarihi bilinmiyor.
 - `codem-dynamicweather/changelog.md` icindeki `## 1.2` basliginda tarih yok.
   Tarih opsiyonel oldugu icin bu kurala uygun.
