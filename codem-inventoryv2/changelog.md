@@ -1,3 +1,16 @@
+## 2.49.1 - 2026-11-12
+
+- Fix: putting a weapon away no longer runs twice (spam)
+- Fix: ammo added to a held weapon item is kept
+- Fix: double encoded saved inventories read correctly
+- Broken saved inventories read as empty, console warning
+
+### Changed files
+
+fxmanifest.lua: version 2.49.1
+client/weapons.lua: put away runs once, saved ammo kept
+server/db.lua: saved inventories read safely
+
 ## 2.49.0 - 2026-10-20
 
 - 30 languages, pick one with Config.locale
