@@ -1,3 +1,13 @@
+## 3.21 - 2026-11-12
+
+- Photos upload: empty or blank API key now shows "auth token missing" instead of a generic upload error
+- Photos upload: NoCloud and presigned URL failures print the HTTP status to the server console
+
+### Changed files
+
+fxmanifest.lua: version 3.21
+server/utils/Upload.lua: blank API key check, HTTP status logging
+
 ## 3.20 - 2026-10-22
 
 - Jobby: job vault works with Renewed-Banking again
