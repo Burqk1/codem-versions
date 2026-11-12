@@ -31,7 +31,8 @@ script.
     codem-fishing-simulator      codem-supreme-multicharacter
     codem-fuel                   codem-supreme-settings
     codem-gps                    codem-supreme-uipack
-    codem-inventoryv2            codem-tv
+    codem-housing                codem-tv
+    codem-inventoryv2
     codem-mdtv2
     codem-mechanicv2
 
