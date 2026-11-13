@@ -1,3 +1,12 @@
+## 1.0.3 - 2026-11-13
+
+- Fix: F8 error on pumps without a jerry can set down
+
+### Changed files
+
+fxmanifest.lua: version 1.0.3
+client/target.lua: pick up option check
+
 ## 1.0.2 - 2026-11-12
 
 - Fill a jerry can at the pump: set it down, buy on the screen
