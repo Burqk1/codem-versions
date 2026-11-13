@@ -1,12 +1,18 @@
-## 3.21 - 2026-11-12
+## 3.21 - 2026-11-13
 
-- Photos upload: empty or blank API key now shows "auth token missing" instead of a generic upload error
-- Photos upload: NoCloud and presigned URL failures print the HTTP status to the server console
+- Garage: mGarage found under any folder name
+- Garage: picked up again when mGarage restarts
+- Photos: empty upload key gives auth token missing
+- Photos: failed uploads print HTTP status in console
+- Selly: listing titles up to 100 characters
 
 ### Changed files
 
 fxmanifest.lua: version 3.21
-server/utils/Upload.lua: blank API key check, HTTP status logging
+modules/garage/server.lua: mGarage detection
+server/utils/Upload.lua: empty key check, error print
+sql/phone.sql: sellypost title varchar(100)
+config/Config.lua: mGarage comment
 
 ## 3.20 - 2026-10-22
 
