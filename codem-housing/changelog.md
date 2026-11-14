@@ -1,3 +1,14 @@
+## 1.0.2 - 2026-11-15
+
+- Smart panel works in MLO houses
+- Inside the house zone counts as inside for the panel
+
+### Changed files
+
+fxmanifest.lua: version 1.0.2
+client/smartpanel.lua, client/player.lua, client/main.lua
+server/main.lua
+
 ## 1.0.1 - 2026-11-13
 
 - Police seal: tape across the door, sealed houses refuse entry
