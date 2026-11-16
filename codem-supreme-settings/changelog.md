@@ -1,3 +1,17 @@
+## 1.1.2 - 2026-11-16
+
+- Background blur switch also turns off GTA's screen blur
+- Fixes a white screen on DirectX 10 / low Post FX clients
+- New Config.GameBlur turns GTA's blur off for everyone
+
+### Changed files
+
+fxmanifest.lua: version 1.1.2
+client/client.lua: game blur follows the player switch
+config.lua: Config.GameBlur
+locales/*.json: Background blur description
+html/: rebuilt
+
 ## 1.1.0 - 2026-10-20
 
 - New look: Apex, server default with Config.Style
