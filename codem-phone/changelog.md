@@ -1,3 +1,15 @@
+## 3.22 - 2026-11-18
+
+- Hive: channel messages reach other members live again
+- ESX: job and grade data read with ESX.GetJobs()
+- ESX: grade named boss counts as boss
+
+### Changed files
+
+fxmanifest.lua: version 3.22
+server/socials/hive.lua: helper order fix
+modules/framework/esx/server.lua: GetJobs, boss grade
+
 ## 3.21 - 2026-11-13
 
 - Garage: mGarage found under any folder name
