@@ -1,3 +1,22 @@
+## 1.0.4 - 2026-11-20
+
+- Dirt spots and robot vacuum work in MLO houses
+- Photo address defaults to 'auto' (server https cfx.re URL)
+- Console warns when the photo address is http or localhost
+- House garage works with qb-garages and qs-advancedgarages
+- MLO doorbell only at the entry door, not on houses for sale
+- MLO house cameras can be watched from anywhere in the zone
+
+### Changed files
+
+fxmanifest.lua: version 1.0.4, codem-lib garage client
+client/garage.lua, client/interior.lua, client/junk.lua
+client/robot.lua, client/player.lua, client/main.lua
+client/target.lua, server/main.lua
+config/main.lua: publicBaseUrl = 'auto'
+installation/README.md: photo address
+web/dist/: rebuilt
+
 ## 1.0.3 - 2026-11-16
 
 - MLO house zone counts as inside: points, stash, media
